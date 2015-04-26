@@ -16,8 +16,8 @@ Dataset
 ========================================================
 
 The dataset is taken from World Bank Database (http://databank.worldbank.org/data/home.aspx):
-* Internet Penetration for ASEAN Countries (Singapore, Malaysia, Indonesia, Thailand, Philippine, Cambodia, Myanmar)
-* Internet Penetration for ASEAN Countries (Singapore, Malaysia, Indonesia, Thailand, Philippine, Cambodia, Myanmar)
+* Internet Penetration for ASEAN Countries 
+* Mobile Penetration for ASEAN Countries 
 
 From those 2 data, we calculate average on Internet and Mobile penetration among those countries.
 
@@ -30,7 +30,6 @@ Analysis
 ========================================================
 
 The data shows that Internet penetration trend among ASEAN countries are totally diversified.
-While, the trend for Mobile penetration are mostly balance, except for emerging market like Myanmar and Cambodia.
 
 Singapore as the most developed country in region, dominate Internet and Mobile penetration in the region.
 While Cambodia and Myanmar in the bottom 2.
@@ -62,11 +61,9 @@ Conclusion
 
 The full timeseries is plotted as web application using Shiny instead:
 https://sgirabin.shinyapps.io/coursera-develop-data-product-project/
-$year
-Shiny interactivity allows the user to observe the info year by year clearly.
+
 
 Based on the observed trend, the following are conclusions:
-* Singapore’s internet penetration is 73% (2013). However, poor penetration in other ASEAN Countries is bringing down SEA’s average to 34%(2013)
-* Myanmar is the lowest mobile penetration in SEA's with only 12.83% (2013) compare to SEA's average of 118.52% (2013). Again, Singapore has the highest mobile penetration rate with 155.92% (2013) for every 100 people. It means, more than 50% population has at least 1 or more mobile phone.
-* Shiny's interactivity allows users to focus on a number of information on particular countries & observe trend over time
-
+* Shiny interactivity allows the user to focus on a number of information year by year clearly  & observe trend over time
+* Singapore has the highest internet and mobile penetration  in the region with 73% (2013) 155.92%(2013). However, poor penetration in other ASEAN Countries is bringing down SEA’s average to 34%(2013)
+* Myanmar is the lowest internet and mobile penetration in SEA's with only 1.20(2013) and 12.83% (2013)
