@@ -20,7 +20,7 @@ shinyServer(function(input, output, session) {
             
             barplot(dataplot$countriesInternet,
                   names.arg=dataplot$year,
-                  main=paste("Internet Adoption in",input$country),
+                  main=paste("Internet Penetration Trend in",input$country),
                   ylab="Total Adoption (per 100 people)",
                   xlab="Year")          
             
@@ -32,7 +32,7 @@ shinyServer(function(input, output, session) {
             
             barplot(dataplot[,"countriesMobile"],
                     names.arg=dataplot[,"year"],
-                    main=paste("Mobile Adoption in",input$country),
+                    main=paste("Mobile Penetration Trend in",input$country),
                     ylab="Total Adoption (per 100 people)",
                     xlab="Year")            
         }
@@ -45,12 +45,12 @@ shinyServer(function(input, output, session) {
         
         if (input$dataType == "Internet"){
             output <- output[,  c("year", "countriesInternet", "averageInternet")]
-            colnames(output) <- c("Year", "Internet Adoption", "Other ASEAN Countries")            
+            colnames(output) <- c("Year", "Internet Penetration", "Other ASEAN Countries")            
         }
         
         if (input$dataType == "Mobile") {
             output <- output[,  c("year", "countriesMobile", "averageMobile")]
-            colnames(output) <- c("Year", "Mobile Adoption", "Other ASEAN Countries")            
+            colnames(output) <- c("Year", "Mobile Penetration", "Other ASEAN Countries")            
         }
         
         output

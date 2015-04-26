@@ -13,7 +13,7 @@ shinyUI(
     fluidPage(    
         
         # Give the page a title
-        titlePanel("Average Internet and Mobile Adoption in ASEAN"),
+        titlePanel("Internet and Mobile Penetration Trend in ASEAN Countries"),
         
         # Generate a row with a sidebar
         sidebarLayout(      
@@ -23,14 +23,14 @@ shinyUI(
                 
 
                 helpText("Data from ", a("World Bank.", href = "http://databank.worldbank.org/data/home.aspx")),
-                selectInput("dataType","Adoption Type:", choices=list("Internet","Mobile"), selected="Internet"),
+                selectInput("dataType","Penetration Type:", choices=list("Internet","Mobile"), selected="Internet"),
                 selectInput("country", "Countries:", 
                             choices=list("Singapore", "Thailand" , "Malaysia", "Indonesia", "Philippines","Vietnam", "Myanmar", "Cambodia"), selected = "Singapore"),                                
                 hr(),
                 
                 #Documentation
                 h4("Tutorial:"),
-                h5("1. Please select the data adoption type"),
+                h5("1. Please select the data Penetration type"),
                 h5("2. Please select the country"),
                 h5("3.The graph and table will be automatically plotted based on the selection"),
                 br(),
