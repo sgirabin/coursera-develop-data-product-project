@@ -29,30 +29,29 @@ Shiny is used to present the timeseries data:
 Analysis
 ========================================================
 
-The data shows that Internet penetration trend among ASEAN countries are totally diversified.
+The data shows that Internet and Mobile penetration trend among ASEAN countries are totally diversified. 
 
-Singapore as the most developed country in region, dominate Internet and Mobile penetration in the region.
-While Cambodia and Myanmar in the bottom 2.
+Singapore dominate Internet and Mobile penetration in the region. While Cambodia and Myanmar in the bottom 2.
 
-The following code plots Internet and Mobile Trend in Singapore compare to other ASEAN countries.
+The following code plots Internet and Mobile Trend in Singapore:
 
 
 
 ```r
-qplot("year", "countriesInternet", data=subset(dataset, countries=="Singapore"))
-qplot("year", "countriesMobile", data=subset(dataset, countries=="Singapore"))
+qplot(year, countriesInternet, data=subset(dataset, as.character(countries)=="Singapore"), color=year)
+qplot(year, countriesMobile, data=subset(dataset, as.character(countries) =="Singapore"), color=year)
 ```
 
 
 Effective Plot
 ========================================================
 
-Single country plot: clear info, no trend.
+Single country plot: clear info, no countries comparison trend.
 ![plot of chunk unnamed-chunk-3](presentation-figure/unnamed-chunk-3-1.png) 
 
 ***
 
-Time series plot: too much info but can see trends
+Time series plot: too much info but can see countries comparison trends
 ![plot of chunk unnamed-chunk-4](presentation-figure/unnamed-chunk-4-1.png) 
 
 
