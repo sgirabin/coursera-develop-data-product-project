@@ -13,12 +13,17 @@ shinyServer(function(input, output, session) {
 
     
     output$chart <- renderPlot({
+        
+        
         if("Internet" == input$dataType) {
+            
             dataplot <- subset(internetmelt, countries == input$country)
             dataplot <- dataplot[order(as.integer(dataplot$year), decreasing=FALSE),]
             dataplot <- dataplot[,c("year", "countriesInternet")]
             
-            barplot(dataplot$countriesInternet,
+            
+            
+            barplot(dataplot[,"countriesInternet"],
                   names.arg=dataplot$year,
                   main=paste("Internet Penetration Trend in",input$country),
                   ylab="Total Adoption (per 100 people)",

@@ -12,4 +12,4 @@ names(mobilemelt) <- c('year','averageMobile', 'countries', 'countriesMobile')
 
 # combine all datasets above into single data frame
 dataset <- merge(internetmelt, mobilemelt, by=c('year','countries'))
-
+write.csv(file='./data/dataset.csv', x=dataset, row.names=FALSE)
